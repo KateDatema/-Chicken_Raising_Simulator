@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ChickenComponent } from './Chicken/Chicken.component';
+import { ChickenSim } from './ChickenSim.Service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { ChickenComponent } from './Chicken/Chicken.component';
       { path: 'chicken', component: ChickenComponent }
     ])
   ],
-  providers: [],
+  providers: [ChickenSim],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

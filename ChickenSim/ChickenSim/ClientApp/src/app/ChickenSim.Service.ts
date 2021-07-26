@@ -7,7 +7,7 @@ import {Farm } from './farm'
   providedIn: 'root'
 })
 
-export class FarmService {
+export class ChickenSim {
   constructor(private http: HttpClient) {
   }
   //concatonating / appending our Favorites into our base url
@@ -16,6 +16,9 @@ export class FarmService {
   }
 
   getChicken(@Inject('BASE_URL') baseUrl: string): any {
-    return this.http.get<Chicken[]>(baseUrl + 'Farm/all');
+    let x: Chicken[] = [];
+    this.http.get<Chicken[]>(baseUrl + 'api/chickens').subscribe(results => x = results);
+    console.log(this.http.get<Chicken[]>(baseUrl + 'api/chickens'));
+    return x;
   }
 }

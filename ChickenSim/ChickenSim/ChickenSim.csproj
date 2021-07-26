@@ -38,13 +38,14 @@
   <ItemGroup>
     <None Remove="ClientApp\chicken.ts" />
     <None Remove="ClientApp\ChickenSimService.ts" />
+    <None Remove="ClientApp\src\app\chicken.ts" />
     <None Remove="ClientApp\src\Farm.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <TypeScriptCompile Include="ClientApp\chicken.ts" />
-    <TypeScriptCompile Include="ClientApp\ChickenSimService.ts" />
-    <TypeScriptCompile Include="ClientApp\farm.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\ChickenSim.Service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\farm.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\chicken.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
