@@ -1,11 +1,13 @@
 export interface Chicken {
-  favoriteID: number | null;
-  userID: string;
-  questionID: number;
+  //favoriteID: number | null;
+  //userID: string;
+  //questionID: number;
+
   id: number;
   name: string;
   age: number;
   smarts: number;
+  speed: number;
   strength: number;
   luck: number;
   color: string;

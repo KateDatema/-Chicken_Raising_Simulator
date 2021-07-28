@@ -88,12 +88,12 @@ namespace ChickenSim.Migrations
                         .HasForeignKey("FarmId")
                         .HasConstraintName("FK__Chickens__FarmId__29572725");
 
-                    b.Navigation("Farm");
+                   
                 });
 
             modelBuilder.Entity("ChickenSim.Models.Farm", b =>
                 {
-                    b.Navigation("Chickens");
+                   
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,16 @@
+<h2>Please secect a farm</h2>
+
+<div *ngFor="let f of farms">
+  <p>{{f.name}}</p>
+</div>
+
+<h2>Start a new farm</h2>
+<!--<form ngForm="#FarmForm" >-->
+  <h4>Farm Name:</h4>
+  <input type="text" name="Name" [(ngModel)]="farmName"/>
+  <p>{{farmName}}</p>
+
+  <input type="submit" (click)="addFarm(farmName)"/>
+<!--</form>-->
+
+<!--<buttong (click)="addFarm("James Farm")">Add Farm</buttong>-->

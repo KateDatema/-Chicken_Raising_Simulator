@@ -9,8 +9,9 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
-import { ChickenComponent } from './Chicken/Chicken.component';
-import { ChickenSim } from './ChickenSim.Service';
+import { FarmPickerComponent } from './FarmPicker/farmPicker.component';
+import { FarmComponent } from './farm/farm.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { ChickenSim } from './ChickenSim.Service';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    ChickenComponent
+    FarmPickerComponent,
+    FarmComponent
+    
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -29,10 +32,11 @@ import { ChickenSim } from './ChickenSim.Service';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'chicken', component: ChickenComponent }
+      { path: 'farm-picker', component: FarmPickerComponent },
+      { path: 'farm', component: FarmComponent }
+
     ])
   ],
-  providers: [ChickenSim],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
